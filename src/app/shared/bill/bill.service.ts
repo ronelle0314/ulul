@@ -10,11 +10,11 @@ export class BillService {
   constructor(private http: HttpClient) { }
 
 getAll(): Observable<any>{
-  return this.http.get('http://localhost:8105/getRequest');
+  return this.http.get('http://localhost:8181/getRequest');
 }
 postTestToApi() {
   console.log("POST TEST");
-  this.http.post<string>("http://localhost:8105/test", "Ok na na read na").subscribe(
+  this.http.post<string>("http://localhost:8181/test", "Ok na na read na").subscribe(
     res => {
       console.log(res);
     },
@@ -32,15 +32,7 @@ getFilePathFromComponent(filePath: string) {
 
 postFilePathToApi() {
   console.log("POSTING FILEPATH TO SERVER: " + this.filePath);
-  this.http.post<String>("http://localhost:8105/test", this.filePath).subscribe(
-    res => {
-      console.log(res);
-    },
-    err => {
-      console.log("ERROR OCCURRED IN POST" + err);
-    }
-  
-  );
+  this.http.post<String>("http://localhost:8181/test", this.filePath).subscribe();
 }
 
 

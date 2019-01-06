@@ -1,0 +1,37 @@
+.container {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.tablecon {
+    -webkit-box-shadow: 0px 0px 54px -7px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 54px -7px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 54px -7px rgba(0, 0, 0, 0.75);
+    width: 100%;
+    text-align: center;
+    font-family: "Century Gothic";
+}
+
+.tr:nth-child(even) {
+    background: #EEEEEE;
+}
+
+.tr:nth-child(odd) {
+    background: #FFFFFF;
+}
+
+.th {
+    background: #FF9898;
+    text-align: center;
+}
+
+.td {
+    width: 10%;
+}
+
+p {
+    color: #ff6666;
+    font-family: "Century Gothic";
+    font-size: 3vw;
+}

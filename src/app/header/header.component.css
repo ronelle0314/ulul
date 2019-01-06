@@ -1,0 +1,60 @@
+.jumbotron {
+    background: url('../../assets/images/headerlogo.png') no-repeat;
+    background-size: 100% 100%;
+    text-align: center;
+}
+
+.acnlogo1 {
+    width: 50%;
+    background: url('../../assets/images/acnlogo1.png') no-repeat;
+    background-size: 100% 100%;
+}
+
+.acnlogo2 {
+    width: 50%;
+    background: url('../../assets/images/acnlogo2.png') no-repeat;
+    background-size: 100% 100%;
+}
+
+table {
+    width: 100%;
+}
+
+.containers {
+    position: relative;
+    width: 10%;
+}
+
+.image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 3vw;
+    text-align: center;
+    font-family: "Century Gothic";
+    border: solid;
+    border-color: #66ff33;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #434840;
+    overflow: hidden;
+    width: 0;
+    height: 100%;
+    transition: .5s ease;
+}
+
+.containers:hover .overlay {
+    width: 200%;
+}
+
+p {
+    font-family: "Century Gothic";
+    font-size: 2vw;
+    margin: 0 auto;
+    color: wheat;
+}

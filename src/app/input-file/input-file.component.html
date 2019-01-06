@@ -1,5 +1,42 @@
-<form action="POST">
+<div class="container">
+    <form action="POST">
 
-    <input type="file" (change)="fileUploaded($event)" />
 
-</form>
+
+        <div *ngIf="currentFileUpload" class="progress">
+            <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" attr.aria-valuenow="{{progress.percentage}}" aria-valuemin="0" aria-valuemax="100" [ngStyle]="{width:progress.percentage+'%'}">
+                {{progress.percentage}}%</div>
+        </div>
+
+        <label class="btn btn-default">
+        <input type="file" (change)="selectFile($event)">
+    </label>
+
+        <button class="btn btn-success" [disabled]="!selectedFiles" (click)="upload()">Upload</button>
+        <br><br>
+        <p *ngFor="let errors of reqs "> {{errors.errs}}</p>
+        <br>
+        <table class="tablecon">
+            <th class="th">Billing Cycle</th>
+            <th class="th">Start Date</th>
+            <th class="th">End Date</th>
+            <th class="th">Account Name</th>
+            <th class="th">Last Name</th>
+            <th class="th">First Name</th>
+            <th class="th">Amount</th>
+
+            <tr *ngFor="let req of reqs" class="tr">
+                <td class="td" *ngIf="req.errs == null"> {{req.billingCycle}}</td>
+                <td class="td " *ngIf="req.errs == null"> {{req.startDate}}</td>
+                <td class="td " *ngIf="req.errs == null"> {{req.endDate}}</td>
+                <td class="td " *ngIf="req.errs == null"> {{req.accountName}}</td>
+                <td class="td " *ngIf="req.errs == null"> {{req.customerLastName}}</td>
+                <td class="td " *ngIf="req.errs == null"> {{req.customerFirstName}}</td>
+                <td class="td " *ngIf="req.errs == null"> {{req.amount}}</td>
+            </tr>
+
+
+        </table>
+
+    </form>
+</div>
